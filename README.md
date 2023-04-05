@@ -4,6 +4,7 @@
 
 ## Features
 
+- Basic `JWT Authentication` with `argon2 password hash`
 - Moleculer v0.14 with full-detailed `moleculer.config.ts` file.
 - Common mono-repo project with a demo `greeter` service.
 - Sample database `products` service (with file-based NeDB in development & MongoDB in production).
@@ -14,7 +15,6 @@
 - Docker & Docker Compose & Kubernetes files.
 - Unit tests with [Jest](http://facebook.github.io/jest/).
 - Lint with [ESLint](http://eslint.org/).
-- Launch file for debugging in [VSCode](https://code.visualstudio.com/).
 
 ## Install
 
@@ -22,6 +22,18 @@ To install use the [moleculer-cli](https://github.com/moleculerjs/moleculer-cli)
 
 ```bash
 $ moleculer init cavinpabua/moleculer-template-auth my-project
+```
+
+Make .env file containing the following:
+
+```bash
+JWT_SECRET=sample123
+```
+
+Make sure to edit package.json
+
+```bash
+--envfile .env.filename
 ```
 
 ## Prompts
@@ -59,10 +71,10 @@ Create 'moleculer-demo' folder...
 
 ## License
 
-moleculer-template-project-typescript is available under the [MIT license](https://tldrlegal.com/license/mit-license).
+moleculer-template-project-typescript-auth is available under the [MIT license](https://tldrlegal.com/license/mit-license).
 
 ## Contact
 
 Copyright (c) 2023 MoleculerJS
 
-[![@moleculerjs](https://img.shields.io/badge/github-moleculerjs-green.svg)](https://github.com/moleculerjs) [![@MoleculerJS](https://img.shields.io/badge/twitter-MoleculerJS-blue.svg)](https://twitter.com/MoleculerJS)
+[![@moleculerjs](https://img.shields.io/badge/github-moleculerjs-green.svg)](https://github.com/moleculerjs)
