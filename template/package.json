@@ -47,10 +47,6 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "argon2": "^0.30.3",
-    "dotenv": "^16.0.3",
-    "jsonwebtoken": "^9.0.0",
-    "moleculer": "^0.14.27",
     {{#apiGW}}
     "moleculer-web": "^0.10.5",
     {{/apiGW}}
@@ -79,7 +75,10 @@
     {{#redis}}
     "ioredis": "^5.0.0",
     {{/redis}}
-
+    "moleculer": "^0.14.27"
+    "argon2": "^0.30.3",
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^9.0.0",
   },
   "engines": {
     "node": ">= 16.x.x"
