@@ -1,0 +1,13 @@
+{
+    "apiGW": true,
+    "needTransporter": true,
+    "transporter": "NATS",
+    "needCacher": false,
+    "dbService": true,
+    "metrics": true,
+    "reporter": "Prometheus",
+    "tracing": true,
+    "exporter": "Console",
+    "docker": true,
+    "lint": true
+}
