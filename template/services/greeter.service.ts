@@ -8,7 +8,15 @@ interface GreeterSettings {
 	defaultName: string;
 }
 
-type GreeterThis = Service<GreeterSettings>;
+interface GreeterMethods {
+	uppercase(str: string): string;
+}
+
+interface GreeterLocalVars {
+	myVar: string;
+}
+
+type GreeterThis = Service<GreeterSettings> & GreeterMethods & GreeterLocalVars;
 
 const GreeterService: ServiceSchema<GreeterSettings> = {
 	name: "greeter",
@@ -34,7 +42,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				method: "GET",
 				path: "/hello",
 			},
-			handler(this: GreeterThis /* , ctx: Context */): string {
+			handler(this: GreeterThis/* , ctx: Context */): string {
 				return `Hello ${this.settings.defaultName}`;
 			},
 		},
